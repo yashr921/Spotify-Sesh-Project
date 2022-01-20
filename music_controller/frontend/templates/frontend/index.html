@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!-- The django app renders the template for the HTML that is then filled in by the react code-->
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <meta name='viewport' content="width=device-width, initial-scale=1">
+        <title>Music Controller</title>
+        <!-- This load static looks at the javascript code that we are going to be bundling-->
+        {% load static %}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Loading stylesheet from google's material ui-->
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+        />
+        <!-- Loading styesheet from static/css/index.css which is a custom stylesheet-->
+        <link rel="stylesheet" type="text/css" href="{% static "css/index.css" %}"
+        />
+    </head>
+    <body>
+        <div id="main">
+            <!-- This is the div that the react code is going to reference and fill in all the data-->
+            <div id="app"></div>
+        </div>
+        <!-- This loads the main js file being used as the bundle-->
+        <script src="{% static "frontend/main.js" %}"></script>
+    </body>
+</html>

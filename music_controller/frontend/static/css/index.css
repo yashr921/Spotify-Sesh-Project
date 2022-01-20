@@ -1,0 +1,27 @@
+/* Makes the head and body span the entire page */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+/* Make the main and app div cover 100% of the page and make it at the top left */
+#main {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+}
+/* centers anything inside whatever container it is in */
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
